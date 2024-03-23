@@ -8,7 +8,7 @@
     <title>Административная панель</title>
 
     <link href="design/css/okay.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="design/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="design/images/favicon.svg" type="image/x-icon">
     <script src="design/js/jquery/jquery.js"></script>
 </head>
 <body>
@@ -85,7 +85,7 @@
                         <div class="card-block text-xs-center">
                             <div>
                                 <p>
-                                    <img src="design/images/system_logo.png" alt="OkayCMS" />
+                                    <img src="design/images/system_logo.svg" alt="OkayCMS" />
                                 </p>
                             </div>
                         </div>

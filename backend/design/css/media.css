@@ -19,7 +19,7 @@
         width: 30px;
         height: 40px;
         display: inline-block;
-        background: url(../images/logo_img.png) no-repeat center center;
+        background: url(../images/logo_img.svg) no-repeat center center;
         background-size: cover;
         z-index: 1200;
         background-color: #272b35;

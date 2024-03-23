@@ -6,7 +6,7 @@
     <META HTTP-EQUIV="Expires" CONTENT="-1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>{$meta_title|escape}</title>
-    <link rel="icon" href="design/images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="design/images/favicon.svg" type="image/x-icon" />
     <script src="design/js/jquery/jquery.js"></script>
     <script src="design/js/jquery.scrollbar.min.js"></script>
     <script src="design/js/bootstrap.min.js"></script>
@@ -26,32 +26,14 @@
     {/if}
     <script src="design/js/toastr.min.js"></script>
     <script src="design/js/Sortable.js"></script>
-    <!-- Google Tag Manager -->
-    {if $settings->gather_enabled}
-        {literal}
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','GTM-P6T2LJP');
-        </script>
-        {/literal}
-    {/if}
-    <!-- End Google Tag Manager -->
 </head>
 <body class="navbar-fixed {if $manager->menu_status && $is_mobile === false && $is_tablet === false}menu-pin{/if}">
-    <!-- Google Tag Manager (noscript) -->
-    {if $settings->gather_enabled}
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6T2LJP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    {/if}
-    <!-- End Google Tag Manager (noscript) -->
-
     <a href="javascript:;" id="fix_logo" class="hidden-lg-down"></a>
     <nav id="admin_catalog" class="fn_left_menu">
         <div id="mob_menu"></div>
         <div class="sidebar_header">
             <a class="logo_box">
-                <img src="design/images/logo_title.png" alt="OkayCMS"/>
+                <img src="design/images/logo_title.svg" alt="OkayCMS"/>
             </a>
             {if $is_mobile === false && $is_tablet === false}
                 <span class="fn_switch_menu menu_switch fn_ajax_action {if $manager->menu_status}fn_active_class{/if} hint-left-middle-t-white-s-small-mobile  hint-anim" data-module="managers" data-action="menu_status" data-id="{$manager->id}" data-hint="{$btr->catalog_fixation}">
@@ -145,25 +127,6 @@
                             <span class="hidden-lg-down">{$btr->index_exit|escape}</span>
                             {include file='svg_icon.tpl' svgId='exit'}
                         </a>
-                    </div>
-                    {*Техподдержка*}
-                    <div class="admin_techsupport">
-                        <div class="techsupport_inner">
-                            <a {if $support_info->public_key} data-hint="{$support_info->balance|balance}"{else} data-hint="Not active" {/if}  class="hint-bottom-middle-t-info-s-small-mobile  hint-anim"  href="index.php?module=SupportAdmin">
-                                <span class="quickview_hidden">{$btr->index_support|escape}</span>
-                                {include file='svg_icon.tpl' svgId='techsupport'}
-                                {if $support_info->public_key}
-                                    <span class="counter">{$support_info->new_messages}</span>
-                                {/if}
-                            </a>
-                            <div class="techsupport_toggle hidden-md-up">
-                                {if $support_info->public_key}
-                                    <span>{$support_info->balance|balance}</span>
-                                {else}
-                                    <span>Not active</span>
-                                {/if}
-                            </div>
-                        </div>
                     </div>
                     {*Счетчики уведомлений*}
                     <div class="admin_notification">
@@ -262,17 +225,7 @@
                 </div>
                 <footer id="footer" class="">
                     <div class="col-md-12 font_12 text_white">
-                        <a href="https://okay-cms.com">OkayCMS </a> &copy; {$smarty.now|date_format:"%Y"} v.{$config->version} | {$btr->index_logged|escape}  {$manager->login|escape}
-                        <div class="float-md-right">
-                            <a href='index.php?module=LicenseAdmin' class="text_white">{$btr->license_text|escape}</a>,
-                            {if $support_info->public_key}
-                            <a class="text_success" href="index.php?module=SupportAdmin">{$btr->index_support_active|escape} ({$support_info->new_messages})</a>
-                            {else}
-                            <a href="index.php?module=SupportAdmin">
-                                <span class="text_warning">{$btr->index_support_not_active|escape}</span>
-                            </a>
-                            {/if}
-                        </div>
+                        <a href="https://okay-cms.ru">OkayCMS </a> &copy; {$smarty.now|date_format:"%Y"} v.{$config->version} | {$btr->index_logged|escape}  {$manager->login|escape}
                     </div>
                 </footer>
              </div>
